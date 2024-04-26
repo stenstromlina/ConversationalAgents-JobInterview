@@ -1,7 +1,7 @@
 package furhatos.app.jokebot.flow.main
 
 import furhatos.app.jokebot.flow.Parent
-import furhatos.app.jokebot.jokes.proceed
+import furhatos.app.jokebot.gestures.proceed
 import furhatos.app.jokebot.nlu.confusedUser
 import furhatos.autobehavior.defineMicroexpression
 import furhatos.flow.kotlin.*

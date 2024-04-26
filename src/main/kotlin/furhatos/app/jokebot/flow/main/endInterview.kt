@@ -1,7 +1,7 @@
 package furhatos.app.jokebot.flow.main
 
 import furhatos.app.jokebot.flow.Parent
-import furhatos.app.jokebot.jokes.grateful
+import furhatos.app.jokebot.gestures.grateful
 import furhatos.flow.kotlin.*
 import furhatos.nlu.common.No
 import furhatos.nlu.common.Yes

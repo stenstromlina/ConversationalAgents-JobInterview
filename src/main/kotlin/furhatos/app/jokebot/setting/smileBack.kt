@@ -1,8 +1,8 @@
 package furhatos.app.jokebot.setting
 
-import furhatos.app.jokebot.jokes.indefiniteBigSmile
-import furhatos.app.jokebot.jokes.indefiniteSmile
-import furhatos.app.jokebot.jokes.stopSmile
+import furhatos.app.jokebot.gestures.indefiniteBigSmile
+import furhatos.app.jokebot.gestures.indefiniteSmile
+import furhatos.app.jokebot.gestures.stopSmile
 import furhatos.flow.kotlin.furhat
 import furhatos.flow.kotlin.onUserGesture
 import furhatos.flow.kotlin.onUserGestureEnd

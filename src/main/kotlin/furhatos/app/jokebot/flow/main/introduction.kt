@@ -5,7 +5,7 @@ import furhatos.app.jokebot.nlu.confusedUser
 import furhatos.nlu.common.*
 import furhatos.flow.kotlin.*
 import furhatos.gestures.Gestures
-import furhatos.app.jokebot.jokes.*
+import furhatos.app.jokebot.gestures.*
 
 val startConsent: State = state(Parent) {
     /**

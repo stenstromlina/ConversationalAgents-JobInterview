@@ -7,7 +7,7 @@ import furhatos.app.jokebot.nlu.socialMedia
 import furhatos.app.jokebot.nlu.unMotivatedUser
 import furhatos.flow.kotlin.*
 import furhatos.gestures.*
-import furhatos.app.jokebot.jokes.*
+import furhatos.app.jokebot.gestures.*
 
 
 /** In interview bot we want to proceed with questions and respond according to

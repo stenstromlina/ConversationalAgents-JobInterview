@@ -1,4 +1,4 @@
-package furhatos.app.jokebot.jokes
+package furhatos.app.jokebot.gestures
 
 import furhatos.gestures.ARKitParams.*
 import furhatos.gestures.BasicParams.*
