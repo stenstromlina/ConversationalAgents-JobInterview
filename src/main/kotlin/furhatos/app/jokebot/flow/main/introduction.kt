@@ -228,9 +228,6 @@ val canWeStart: State = state(Parent) {
 
 /**
  * Tell me about yourself question, user gets to answer for 1 minute
- * Maybe add something in case the users asks why? I dunno, just an idea
- * Even if I say something short, the CA automatically jumps into the conversation
- * TODO IMPLEMENT SCENARIO WHEN THE USER ASKS WHAT WOULD YOU LIKE TO KNOW
  */
 
 val tellMeAboutYourself: State = state(Parent) {

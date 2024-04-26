@@ -56,9 +56,6 @@ val anyQuestions: State = state(Parent) {
     }
 }
 
-/**
- * After this interview we should have some ending so that the bot stops listening
- */
 val realInterviewEnd: State = state(Parent) {
     onEntry {
         furhat.gesture(Gestures.BigSmile)

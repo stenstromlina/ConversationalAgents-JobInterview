@@ -7,24 +7,6 @@ package furhatos.app.jokebot.nlu
 import furhatos.nlu.Intent
 import furhatos.util.Language
 
-/**
- * Do we need to keep the classes GoodJoke and BadJoke?
- */
-class GoodJoke : Intent() {
-    override fun getExamples(lang: Language): List<String> {
-        return listOf(
-            "Good one", "I like it", "good joke", "very funny", "hilarious", "haha", "great joke", "amazing"
-        )
-    }
-}
-
-class BadJoke : Intent() {
-    override fun getExamples(lang: Language): List<String> {
-        return listOf(
-            "not funny", "not that funny", "not good", "not so good", "bad joke", "terrible"
-        )
-    }
-}
 
 //Intent for motivated user
 //Answer to question "Why does this role interest you?"
@@ -173,7 +155,7 @@ class becauseOfCourse : Intent() {
 class confusedUser : Intent() {
     override fun getExamples(lang: Language): List<String> {
         return listOf(
-            "What do you want to know", "confused",
+            "What do you want to know", "confused", "I'm not sure what to answer.", "What do you want."
         )
     }
 }

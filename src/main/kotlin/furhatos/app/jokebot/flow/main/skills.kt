@@ -12,10 +12,6 @@ import furhatos.nlu.common.Yes
 
 val skillSecIntro: State = state(Parent) {
 
-    /**
-     * we could probably use askYN for Yes/No question
-     * TODO THE TIMER DOESN'T WORK
-     */
     onEntry {
         furhat.gesture(Gestures.BrowRaise)
         furhat.say("Now I would like to talk about your skills and experience.")
@@ -32,12 +28,6 @@ val skillSecIntro: State = state(Parent) {
     onResponse<No> {
         furhat.say("Well, we still need to continue.")
         goto(pythonCheck)
-        //furhat.say("In that case, we can take a short 3-minute break. Hopefully, we could continue right after.")
-
-        // Set a timer for 10 seconds (10000 milliseconds)
-        //onTime(delay = 180000) {
-        //furhat.say("Ten seconds have passed.")
-        //reentry()
     }
 
     onResponse {
@@ -52,8 +42,6 @@ val skillSecIntro: State = state(Parent) {
         goto(pythonCheck)
     }
 
-    //onReentry {
-    //furhat.say("I hope the little break has helped. Can we continue now?")
 }
 
 /**
@@ -72,10 +60,6 @@ val pythonCheck: State = state(Parent) {
         furhat.say("Amazing!")
         goto(pythonProjectExperience)
     }
-
-    //Maybe we could add another nlu for answers that have to do with other languages
-    //Furhat could answer more precisely depending on that
-    //We could add onResponse<otherProgrammingLanguage> {...}
 
     onResponse<No> {
         furhat.say {
@@ -148,14 +132,6 @@ val pythonProjectExperience: State = state(Parent) {
     }
 }
 
-/**
- * We could listen if the person has experience with Python or not. Based on that we could add some sentence
- * before the default furhat.ask()
- * Example: In case of no experience: "That is unfortunate"
- *
- * We could also add nlu for other prog languages and furhat could answer regarding that
- * like for example "Perfect! We also need people that know Java."
- */
 val programmingLanguages: State = state(Parent) {
 
     onEntry {
@@ -189,20 +165,12 @@ val programmingLanguages: State = state(Parent) {
     }
 }
 
-/**
- * Maybe we can't assume that the user studies at Twente. It would maybe also add confusion if
- * we tell the user that we have their CV even if we don't.
- */
 val studies: State = state(Parent) {
     onEntry {
         furhat.say("Could you tell me more about your studies?")
         furhat.gesture(proceed)
         furhat.ask("Maybe about your favorite subjects " + "or projects that you have worked on.", timeout = 60000)
 
-        //furhat.ask(
-        //"In your CV you mentioned you study at University of Twente. Could you tell me more about" +
-        //"your studies? Favorite subjects or projects that you have worked on."
-        //)
     }
 
     onResponse {
@@ -218,10 +186,6 @@ val studies: State = state(Parent) {
     }
 }
 
-/**
- * We could have developing questions in case the user has built some personal projects
- * Like what did you struggle with, how was? what did you have to learn to finish the project?
- */
 val personalProjects: State = state(Parent) {
     onEntry {
         furhat.ask(
@@ -336,10 +300,6 @@ val internationalSetting: State = state(Parent) {
         goto(teamRole)
     }
 
-    /**
-     * We should maybe prepare more sentences like this so that it isn't repeating too much.
-     */
-
     onNoResponse {
         furhat.gesture(Gestures.Thoughtful)
         furhat.say("I couldn't hear you. I'll repeat my question.")
@@ -347,9 +307,6 @@ val internationalSetting: State = state(Parent) {
     }
 }
 
-/**
- *We could listen for some common projects positions like leader or whatever
- */
 val teamRole: State = state(Parent) {
 
     onEntry {
